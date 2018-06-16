@@ -24,8 +24,9 @@ const styles = {
         marginBottom: 28
     }),
     welcome: RX.Styles.createTextStyle({
-        fontSize: 32,
-        marginBottom: 12
+        fontSize: 52,
+        marginBottom: 12,
+        color: "red"
     }),
     instructions: RX.Styles.createTextStyle({
         fontSize: 16,
@@ -95,7 +96,7 @@ class MainPanel extends RX.Component<MainPanelProps, null> {
                         <RX.Link style={ styles.docLink } url={ 'https://microsoft.github.io/reactxp/docs' }>
                             View ReactXP documentation
                         </RX.Link>
-                        
+
                         <RX.Button style={ styles.roundButton } onPress={ this._onPressNavigate }>
                             <RX.Text style={ styles.buttonText }>
                                 See More Examples
@@ -106,7 +107,7 @@ class MainPanel extends RX.Component<MainPanelProps, null> {
             </RX.View>
         );
     }
-    
+
     private _onPressNavigate = () => {
         this.props.onPressNavigate();
     }
